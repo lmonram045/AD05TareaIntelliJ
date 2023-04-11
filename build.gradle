@@ -13,12 +13,14 @@ repositories {
 }
 
 dependencies {
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     // Añadimos las dependencias necesarias para usar eXist-db.
     implementation 'org.exist-db:exist:6.2.0'
     implementation 'org.exist-db:exist-optional:6.2.0'
-    implementation 'org.xmldb:xmldb-common:20021220'
+    implementation 'net.sf.xmldb-org:xmldb-api:2.0.0'
+    implementation 'net.sf.xmldb-org:xmldb-api:2.0.0'
 }
 
 test {
