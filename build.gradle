@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.iesalandalus.luis'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    // Tengo que añadir los siguientes repositorios para importar las dependencias de eXist-db necesarias.
+    maven { url 'https://repo.maven.apache.org/maven2' }
+    maven { url 'https://exist-db.org/exist/apps/public-repo' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // Añadimos las dependencias necesarias para usar eXist-db.
+    implementation 'org.exist-db:exist:6.2.0'
+    implementation 'org.exist-db:exist-optional:6.2.0'
+    implementation 'org.xmldb:xmldb-common:20021220'
+}
+
+test {
+    useJUnitPlatform()
+}
