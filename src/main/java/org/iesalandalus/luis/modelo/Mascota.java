@@ -4,8 +4,9 @@ public class Mascota {
     private String id;
     private String nombre;
     private String tipo;
+    private String raza;
     private int edad;
-    private Cliente cliente;
+    private int idCliente;
 
     /**
      * Constructor por defecto
@@ -18,21 +19,31 @@ public class Mascota {
      * @param id identificador de la mascota
      * @param nombre nombre de la mascota
      * @param tipo tipo de la mascota
+     * @param raza raza de la mascota
      * @param edad edad de la mascota
-     * @param cliente cliente de la mascota
+     * @param idCliente identificador del cliente
      */
-    public Mascota(String id, String nombre, String tipo, int edad, Cliente cliente) {
+    public Mascota(String id, String nombre, String tipo, String raza, int edad, int idCliente) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
+        this.raza = raza;
         this.edad = edad;
-        this.cliente = cliente;
+        this.idCliente = idCliente;
     }
 
     /* Getters y setters */
 
     public String getId() {
         return id;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
     }
 
     public void setId(String id) {
@@ -63,11 +74,11 @@ public class Mascota {
         this.edad = edad;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 }
